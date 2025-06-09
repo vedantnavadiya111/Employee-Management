@@ -1,47 +1,48 @@
 # Employee Management System
 
-A simple PHP-based employee management system that allows you to create, read, update, and delete employee records.
+A PHP-based employee management system that allows users to manage employee records efficiently.
 
 ## Features
 
-- Add new employees
-- View all employees
-- Update employee information
-- Delete employees
-- Responsive design using Bootstrap
-
-## Requirements
-
-- PHP 7.0 or higher
-- MySQL/MariaDB
-- Web server (Apache, Nginx, etc.)
+- Employee records management
+- Secure authentication
+- Role-based access control
+- Responsive UI
 
 ## Installation
 
-1. Clone this repository:
+1. Clone the repository
    ```
-   git clone https://github.com/vedantnavadiya111/Employee-Management.git
-   ```
-
-2. Import the database:
-   - Create a database named `php_employee_management` in your MySQL server
-   - Or modify the database name in `config.php`
-
-3. Configure the database connection:
-   - Open `config.php` file
-   - Update the database credentials if needed
-
-4. Access the application through your web server:
-   ```
-   http://localhost/Employee-Management/
+   git clone https://github.com/your-username/Employee-Management.git
    ```
 
-## Usage
+2. Import the database schema
+   ```
+   mysql -u username -p php_employee_management < database/schema.sql
+   ```
 
-- Navigate to the homepage to see a list of all employees
-- Click on "Add Employee" to create a new employee record
-- Use the "Edit" and "Delete" buttons to modify or remove employee records
+3. Configure database connection
+   Edit `config.php` with your database credentials:
+   ```php
+   $config = [
+       'servername' => 'localhost',
+       'username' => 'your_username',
+       'password' => 'your_password',
+       'database' => 'php_employee_management'
+   ];
+   ```
+
+4. Start the application
+   ```
+   php -S localhost:8000
+   ```
+
+## Requirements
+
+- PHP 7.4 or higher
+- MySQL 5.7 or higher
+- Web server (Apache/Nginx)
 
 ## License
 
-[MIT License](LICENSE)
+This project is licensed under the MIT License - see the LICENSE file for details.
