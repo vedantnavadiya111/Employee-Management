@@ -1,0 +1,29 @@
+# Set the default page to landing.php
+DirectoryIndex landing.php
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect non-www to www (uncomment if needed)
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Handle 404 errors by redirecting to a custom page
+ErrorDocument 404 /Employee-Management/404.php
+
+# Add security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# PHP settings for better security
+<IfModule mod_php7.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+    php_value error_log "php_errors.log"
+</IfModule>
