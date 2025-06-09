@@ -20,7 +20,7 @@ A simple PHP-based employee management system that allows you to create, read, u
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/Employee-Management.git
+   git clone https://github.com/vedantnavadiya111/Employee-Management.git
    ```
 
 2. Import the database:
